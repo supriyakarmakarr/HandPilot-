@@ -64,7 +64,7 @@ python -V
 ## Step 1 â€” Download the code
 
 ```bash
-https://github.com/shivam-kotwalia/gesture-control/archive/refs/heads/main.zip
+https://github.com/supriyakarmakarr/HandPilot-
 ```
 
 ---
