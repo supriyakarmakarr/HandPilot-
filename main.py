@@ -20,9 +20,9 @@ base_options = mp.tasks.BaseOptions(model_asset_path=model_path)
 options = vision.HandLandmarkerOptions(
     base_options=base_options,
     num_hands=1,
-    min_hand_detection_confidence=0.7,
-    min_hand_presence_confidence=0.7,
-    min_tracking_confidence=0.7
+    min_hand_detection_confidence=0.5,
+    min_hand_presence_confidence=0.5,
+    min_tracking_confidence=0.5
 )
 hand_landmarker = vision.HandLandmarker.create_from_options(options)
 
@@ -125,7 +125,7 @@ while True:
 
                 # TWO FINGERS -> START PRESENTATION
                 elif total == 2:
-                    pyautogui.hotkey("command", "enter")
+                    pyautogui.press("f5")
                     gesture = "Start Slideshow"
                     last_time = current_time
 
