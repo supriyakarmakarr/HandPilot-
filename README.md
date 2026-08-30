@@ -1,226 +1,107 @@
-# HandPilot-
-AI-powered gesture-controlled presentation system using OpenCV, MediaPipe, and PyAutoGUI.
-# Gesture Control Presenter ðŸŽ®ðŸ–ï¸
+<div align="center">
 
-Control your Google Slides presentations using hand gestures through your laptop camera using Computer Vision and AI.
+  <!-- Header Banner -->
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=1,12,24,30&height=260&section=header&text=🖐️%20HandPilot&fontSize=70&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Next-Gen%20AI%20Gesture-Controlled%20Presentation%20System&descFontSize=22&descAlignY=58&descAlign=50" width="100%" alt="HandPilot Header" />
 
-This project uses:
+  <!-- Animated Typing Subtitle -->
+  <a href="https://git.io/typing-svg">
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=3000&pause=1000&color=00F5D4&center=true&vCenter=true&width=650&lines=Touchless+Slide+Navigation+Powered+by+AI;Real-Time+MediaPipe+21-Point+Hand+Landmark+Tracking;Control+Google+Slides+%26+PowerPoint+with+Webcam;Zero+External+Sensors+or+Hardware+Required" alt="Typing SVG" />
+  </a>
 
-* OpenCV
-* MediaPipe
-* PyAutoGUI
+  <br/><br/>
 
-to detect hand gestures and convert them into presentation controls like:
+  <!-- Badges -->
+  <p align="center">
+    <img src="https://img.shields.io/badge/Python-3.9%20%7C%203.10%20%7C%203.11-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
+    <img src="https://img.shields.io/badge/OpenCV-4.8+-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white" alt="OpenCV" />
+    <img src="https://img.shields.io/badge/MediaPipe-0.10+-00C0FF?style=for-the-badge&logo=google&logoColor=white" alt="MediaPipe" />
+    <img src="https://img.shields.io/badge/PyAutoGUI-Automation-FF6F00?style=for-the-badge&logo=autohotkey&logoColor=white" alt="PyAutoGUI" />
+    <img src="https://img.shields.io/badge/Platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey?style=for-the-badge&logo=linux&logoColor=black" alt="Cross-Platform" />
+  </p>
 
-* Next Slide
-* Previous Slide
-* Start Presentation
-* Exit Presentation
+  <p align="center">
+    <a href="#-overview">Overview</a> •
+    <a href="#-gesture-control-matrix">Gestures</a> •
+    <a href="#-key-features">Features</a> •
+    <a href="#-system-architecture--workflow">Architecture</a> •
+    <a href="#-installation--setup">Installation</a> •
+    <a href="#-future-roadmap">Roadmap</a>
+  </p>
 
----
+  <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="700" alt="Divider Animation" />
 
-# ðŸš€ Features
-
-âœ… Control Google Slides using gestures
-âœ… Real-time hand tracking using AI
-âœ… Works directly from laptop webcam
-âœ… No additional hardware required
-âœ… Beginner-friendly AI + Computer Vision project
-
----
-
-# ðŸ§  Gesture Controls
-
-| Gesture          | Action          |
-| ---------------- | --------------- |
-| âœ‹ Open Palm      | Next Slide      |
-| ðŸ¤Ÿ Three Fingers | Previous Slide  |
-| âœŒï¸ Two Fingers   | Start Slideshow |
-| âœŠ Fist           | Exit Slideshow  |
+</div>
 
 ---
 
-# ðŸ› ï¸ Technologies Used
+## ⚡ Overview
 
-* Python
-* OpenCV
-* MediaPipe
-* PyAutoGUI
+**HandPilot** is an intelligent touchless presentation system powered by Computer Vision & Artificial Intelligence. Using your laptop’s built-in webcam, **HandPilot** tracks 21 distinct 3D landmarks on your hand in real time via **Google MediaPipe**, classifies custom hand gestures through spatial geometry, and seamlessly translates them into native keyboard keystrokes using **PyAutoGUI** to control **Google Slides, PowerPoint, Keynote, Canva, or PDF decks**.
 
----
-
-# ðŸ“¦ Installation
-
-## Step 0 - Ensure Python is installed
-
-For Linux and Mac system, please use `python3` instead of `python` in the commands below </br>
-
-Check if python is installed and available in your system PATH on VSCode Terminal (Terminal â†’ New Terminal):
-```bash
-python -V
-```
-
----
-## Step 1 â€” Download the code
-
-```bash
-https://github.com/supriyakarmakarr/HandPilot-
-```
+> 💡 **Why HandPilot?** Say goodbye to clickers, dongles, and being stuck next to your laptop during presentations. Just wave, point, or gesture naturally from anywhere in your camera's field of view!
 
 ---
 
-## Step 2 â€” Install Dependencies
+## 🎮 Gesture Control Matrix
 
-```bash
-python -m pip install --break-system-packages -r requirements.txt
-```
+<div align="center">
 
-## Step 3 â€” Download Hand Landmarker Model
+| Gesture | Visual | Action | Triggered Shortcut | Description |
+| :---: | :---: | :---: | :---: | :--- |
+| **Open Palm** | 🖐️ | **Next Slide** | `Right Arrow` / `Space` | All 5 fingers extended facing camera |
+| **Three Fingers** | 🤟 / 🖖 | **Previous Slide** | `Left Arrow` / `Backspace` | Index, Middle, & Ring fingers raised |
+| **Victory / Peace** | ✌️ | **Start Slideshow** | `F5` / `Ctrl+F5` / `Cmd+Enter` | Index & Middle fingers extended |
+| **Closed Fist** | ✊ | **Exit Slideshow** | `Escape (Esc)` | All fingers curled into a tight fist |
 
-```bash
-python setup_models.py
-```
+</div>
 
----
+<br/>
 
-# â–¶ï¸ Run the App
-
-```bash
-python main.py
-```
-
----
-
-# Close the application
-
-Press Ctrl+C in terminal to close the application
+<div align="center">
+  <img src="https://developers.google.com/static/mediapipe/images/solutions/hand-landmarks.png" width="460" alt="MediaPipe 21 Landmarks Diagram" />
+  <p><em>MediaPipe 21 3D Hand Landmark Coordinates utilized by HandPilot</em></p>
+</div>
 
 ---
 
+## 🚀 Key Features
 
-# ðŸ’» macOS Permission Setup
-
-For keyboard control to work on macOS:
-
-Go to:
-
-System Settings â†’ Privacy & Security
-
-Enable permissions for:
-
-* Accessibility
-* Input Monitoring
-
-Allow access for:
-
-* Terminal
-  OR
-* VS Code
-  OR
-* PyCharm
-
-Without these permissions, the app cannot control Google Slides.
-
----
-
-# ðŸŽ¯ How to Use
-
-1. Open Google Slides in Chrome
-2. Start slideshow mode
-3. Run the Python application
-4. Show gestures in front of webcam
-5. Control slides hands-free
+<table>
+  <tr>
+    <td width="50%">
+      <h3>🔮 Real-Time Hand Tracking</h3>
+      <p>Tracks full 3D hand spatial landmarks with ultra-low latency (~30+ FPS) using Google's optimized ML pipelines.</p>
+    </td>
+    <td width="50%">
+      <h3>🎯 Zero Additional Hardware</h3>
+      <p>Runs directly using standard 720p/1080p built-in laptop webcams or external USB cameras. No sensors needed.</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <h3>🛡️ Smart Gesture Debouncing</h3>
+      <p>Built-in cooldown frames and state-locking mechanisms prevent accidental double-skips and flickering triggers.</p>
+    </td>
+    <td width="50%">
+      <h3>🌐 Universal Deck Compatibility</h3>
+      <p>Works effortlessly with <b>Google Slides, Microsoft PowerPoint, Keynote, Canva, Notion Presentations, and PDF Readers</b>.</p>
+    </td>
+  </tr>
+</table>
 
 ---
 
-# ðŸ“‚ Project Structure
+## 🛠️ System Architecture & Workflow
 
-```bash
-gesture-control/
-â”‚
-â”œâ”€â”€ .gitignore
-â”œâ”€â”€ main.py
-â”œâ”€â”€ README.md
-â”œâ”€â”€ requirements.txt
-â”œâ”€â”€ setup_models.py
-â””â”€â”€ models/
-    â””â”€â”€ hand_landmarker.task
-```
-
----
-
-# ðŸ“œ requirements.txt
-
-```txt
-mediapipe==0.10.35
-opencv-python>=4.8.0
-pyautogui>=0.9.54
-```
-
----
-
-# ðŸ§© How It Works
-
-The application:
-
-1. Captures webcam feed using OpenCV
-2. Detects hand landmarks using MediaPipe
-3. Identifies finger positions
-4. Maps gestures to keyboard shortcuts
-5. Uses PyAutoGUI to control Google Slides
-
----
-
-# ðŸ”® Future Improvements
-
-* Swipe gesture recognition
-* Gesture-based laser pointer
-* Volume control
-* Zoom gestures
-* AI-powered custom gesture training
-* Multi-hand support
-
----
-
-# ðŸŽ“ Learning Outcomes
-
-This project helps students understand:
-
-* Computer Vision
-* AI-based gesture recognition
-* Human Computer Interaction (HCI)
-* Real-time webcam processing
-* Automation using Python
-
----
-
-# ðŸ“¸ Demo Idea
-
-Use this project during:
-
-* AI Workshops
-* Hackathons
-* College Tech Fests
-* Computer Vision Sessions
-* Smart Classroom Demonstrations
-
----
-
-# âš ï¸ Notes
-
-* Ensure good lighting conditions
-* Keep hand visible to webcam
-* Avoid cluttered backgrounds for better detection
-* Works best at moderate camera distance
-
----
-
-# Live MediaPipe 
-![MediaPipe Hand Tracking Demo](https://google-ai-edge.github.io/mediapipe-samples-web/#/vision/hand_landmarker)
-![Google AI Media Pipe] (https://ai.google.dev/edge/mediapipe/solutions/guide)
-
----
-
-# ðŸ‘¨â€ðŸ’» Built With AI + Computer Vision
-
-A futuristic interaction system powered by hand tracking and real-time gesture recognition.
+```mermaid
+graph LR
+    A[📹 Webcam Video Stream] --> B[🖼️ OpenCV Frame Processing]
+    B --> C[🤖 MediaPipe 21-Point Landmark Detection]
+    C --> D[📐 Finger State & Spatial Geometry Engine]
+    D --> E{🎯 Gesture Classifier}
+    E -->|Open Palm 🖐️| F1[➡️ Next Slide]
+    E -->|Three Fingers 🤟| F2[⬅️ Previous Slide]
+    E -->|Two Fingers ✌️| F3[▶️ Start Slideshow]
+    E -->|Fist ✊| F4[⏹️ Exit Slideshow]
+    F1 & F2 & F3 & F4 --> G[⌨️ PyAutoGUI Virtual Keystroke]
+    G --> H[🖥️ Google Slides / PPT / Keynote]
