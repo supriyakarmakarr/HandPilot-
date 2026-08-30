@@ -71,6 +71,7 @@ while True:
     
     # Detect hand landmarks
     detection_result = hand_landmarker.detect(mp_image)
+    
 
     gesture = "Waiting..."
 
