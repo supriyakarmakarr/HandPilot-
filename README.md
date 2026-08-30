@@ -1,15 +1,16 @@
 <div align="center">
 
-  <!-- Header Banner -->
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=1,12,24,30&height=250&section=header&text=HandPilot&fontSize=70&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Next-Gen%20AI%20Gesture-Controlled%20Presentation%20System&descFontSize=22&descAlignY=58&descAlign=50" width="100%" alt="HandPilot Header" />
+  <!-- Header Banner with 🖐️ Hand & Glowing Gradient -->
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=1,12,24,30&height=260&section=header&text=🖐️%20HandPilot&fontSize=70&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Next-Gen%20AI%20Gesture-Controlled%20Presentation%20System&descFontSize=22&descAlignY=58&descAlign=50" width="100%" alt="HandPilot Header" />
 
-  <!-- Animated Waving Hand & Dynamic Typing Subtitle -->
+  <!-- Animated Waving Hand & Subtitle -->
   <h2>
-    <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="38" alt="Waving Hand Animated" />
-    <span>Control Your Slides with Simple Hand Waves!</span>
-    <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="38" alt="Waving Hand Animated" />
+    <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="38" alt="Waving Hand" />
+    <span>Control Your Slides Hands-Free with AI & Computer Vision!</span>
+    <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="38" alt="Waving Hand" />
   </h2>
 
+  <!-- Animated Typing Subtitle -->
   <a href="https://git.io/typing-svg">
     <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=3000&pause=1000&color=00F5D4&center=true&vCenter=true&width=650&lines=Touchless+Slide+Navigation+Powered+by+AI;Real-Time+MediaPipe+21-Point+Hand+Landmark+Tracking;Control+Google+Slides+%26+PowerPoint+with+Webcam;Zero+External+Sensors+or+Hardware+Required" alt="Typing SVG" />
   </a>
@@ -26,11 +27,12 @@
   </p>
 
   <p align="center">
-    <a href="#-super-quickstart-how-to-run-in-3-steps">⚡ Quickstart</a> •
-    <a href="#-gesture-control-matrix">🎮 Gestures</a> •
-    <a href="#-detailed-step-by-step-guide">📖 Beginner Guide</a> •
-    <a href="#-system-architecture--workflow">🛠️ Architecture</a> •
-    <a href="#-troubleshooting--faq">❓ FAQ</a>
+    <a href="#-overview">Overview</a> •
+    <a href="#-super-quickstart-run-in-3-steps">Quickstart</a> •
+    <a href="#-gesture-control-matrix">Gestures</a> •
+    <a href="#-step-by-step-guide-how-to-run">Beginner Guide</a> •
+    <a href="#-system-architecture--workflow">Architecture</a> •
+    <a href="#-troubleshooting--faq">FAQ</a>
   </p>
 
   <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="700" alt="Divider Animation" />
@@ -39,16 +41,22 @@
 
 ---
 
-## ⚡ Super Quickstart (How to Run in 3 Steps!)
+## ⚡ Overview
 
-Agar aap pehli baar use kar rahe hain, bas ye 3 steps follow karein:
+**HandPilot** is an intelligent touchless presentation system powered by Computer Vision & Artificial Intelligence. Using your laptop’s built-in webcam, **HandPilot** tracks 21 distinct 3D landmarks on your hand in real time via **Google MediaPipe**, classifies custom hand gestures through spatial geometry, and seamlessly translates them into native keyboard keystrokes using **PyAutoGUI** to control **Google Slides, PowerPoint, Keynote, Canva, or PDF decks**.
+
+> 💡 **Why HandPilot?** Say goodbye to clickers, dongles, and being stuck next to your laptop during presentations. Just wave, point, or gesture naturally from anywhere in your camera's field of view!
+
+---
+
+## ⚡ Super Quickstart (Run in 3 Steps!)
 
 ```bash
 # 1️⃣ Clone & Enter Directory
 git clone https://github.com/supriyakarmakarr/HandPilot-.git
 cd HandPilot-
 
-# 2️⃣ Install Required Packages & Download AI Model
+# 2️⃣ Install Dependencies & Setup AI Model
 pip install -r requirements.txt
 python setup_models.py
 
